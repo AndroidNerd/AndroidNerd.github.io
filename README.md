@@ -1,2 +1,2 @@
-# AndroidNerd.github.io
-AndroidNerdBlog
+# Viknando.github.io
+ViknandoBlog
