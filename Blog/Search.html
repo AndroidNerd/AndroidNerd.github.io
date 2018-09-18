@@ -35,11 +35,12 @@ function search() {
             arr[2] = '0003.html';
           break;
     }
-    var arrText;
+    var arrText="<ul>";
     for (var i = 0; i < arr.length ; i++) {
       arrText=arrText+"<li>"+arr[i]+"</li>";
     }
-    document.getElementById('box').innerHTML=arrText;
+     arrText=arrText+"</ul>";
+    document.getElementById('result').innerHTML=arrText;
     
 }
 </script>
@@ -55,7 +56,7 @@ function search() {
 
     <section >
       
-      <ul id="result">
+      <div id="result">
       
       </ul>
 
