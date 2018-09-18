@@ -7,32 +7,60 @@
     <meta charset="UTF-8">
 
     <title>Search</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+function search() {
+    var search_value = document.getElementById('box').value;
+    var arr=new Array();
+    switch(search_value) {
+        case '500':
+            arr[0] = '500.html';
+            arr[1] = '0002.html';
+            arr[2] = '0003.html';
+            break;
+        case '1000':
+            arr[0] = '1000.html';
+            arr[1] = '0002.html';
+            arr[2] = '0003.html';
+            break;
+        case '10000':
+            arr[0] = '10000.html';
+            arr[1] = '0002.html';
+            arr[2] = '0003.html';
+            break;
+        default:
+            arr[0] = 'default.html';
+            arr[1] = '0002.html';
+            arr[2] = '0003.html';
+          break;
+    }
+    var arrText;
+    for (var i = 0; i < arr.length ; i++) {
+      arrText=arrText+"<li>"+arr[i]+"</li>";
+    }
+    document.getElementById('box').innerHTML=arrText;
+    
+}
+</script>
+
   </head>
-
   <body>
 
-    <section class="page-header">
+    <section >
 
-      <input class="project-name"/>
+      <input type="text" id="box"/><input type="button" value="查询" onclick="search()" />
 
     </section>
 
-    <section class="main-content">
+    <section >
       
-      <ul>
-      <li>fjewowjeofowowf</li>
-       <li>fjewowjeofjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffowowf</li>
-        <li>fjewowjeoffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowfowowf</li>
-         <li>fjewowjeoffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowfowowf</li>
-          <li>fjewowjefjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowffjewowjeofowowfofowowf</li>
+      <ul id="result">
+      
       </ul>
 
 
     </section>
-
-
 
   
 
