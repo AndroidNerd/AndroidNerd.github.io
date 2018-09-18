@@ -11,9 +11,11 @@
 
 <script>
 function search() {
-    var search_value = document.getElementById('box').value;
+    var sl_value = document.getElementById('sl').value;
+    var yj_value = document.getElementById('yj').value;
+    var rl_value = document.getElementById('rl').value;
     var arr=new Array();
-    switch(search_value) {
+    switch(sl_value) {
         case '500':
             arr[0] = '500.html';
             arr[1] = '0002.html';
@@ -30,9 +32,7 @@ function search() {
             arr[2] = '0003.html';
             break;
         default:
-            arr[0] = 'default.html';
-            arr[1] = '0002.html';
-            arr[2] = '0003.html';
+            arr[0] = 'no data';
           break;
     }
     var arrText="<ul>";
@@ -50,9 +50,25 @@ function search() {
 
     <section style="text-align: center;">
 
-      <input type="text" id="box"/><input type="button" value="查询" onclick="search()" />
+      <label>司龄：</label><input type="number" id="sl" placeholder="请输入司龄" min="1" max="100"/>
 
     </section>
+    <section style="text-align: center;">
+
+      <label>业绩：</label><input type="number" id="yj" placeholder="请输入业绩" min="1" max="1000000"/>
+
+    </section>
+    <section style="text-align: center;">
+
+      <label>人力：</label><input type="number" id="rl" placeholder="请输入人力" min="1" max="10000"/>
+
+    </section>
+     <section style="text-align: center;">
+
+       <input type="button" value="查询" onclick="search()"/>
+
+    </section>
+   
 
     <section >
       
