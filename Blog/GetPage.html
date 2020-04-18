@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Search</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <script>
+function search() {
+
+			var aa = window.localStorage.getItem('test');
+            document.getElementById('result').innerHTML=aa;
+
+
+}
+</script>
+
+</head>
+<body >
+
+<section style="text-align: center;margin: 0,auto">
+  <p >
+
+    <label>司龄：</label><input style="width: 200px" type="number" id="sl" placeholder="请输入司龄" min="1" max="100"/>
+
+  </p>
+  <p >
+
+    <label>业绩：</label><input style="width: 200px" type="number" id="yj" placeholder="请输入业绩" min="1" max="1000000"/>
+
+  </p>
+  <p >
+
+    <label>人力：</label><input style="width: 200px" type="number" id="rl" placeholder="请输入人力" min="1" max="1000"/>
+
+  </p>
+  <p >
+
+    <input type="button" value="查询" onclick="search()"/>
+
+  </p>
+
+</section>
+
+
+<section >
+
+  <div id="result">
+
+    </ul>
+
+
+</section>
+
+
+
+</body>
+
+</html>
